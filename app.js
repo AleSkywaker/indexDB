@@ -10,5 +10,9 @@ request.onupgradeneeded = event =>{
     console.log('Actualizacion de DB')
 
     let db = event.target.result;
+
+    db.createObjectStore('heroes', {
+        keyPath: 'id'
+    })
 }
 
