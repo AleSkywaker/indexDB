@@ -1,7 +1,7 @@
 
 // indexedDB: Reforzamiento
 
-let request = window.indexedDB.open('mi-database', 1)
+let request = window.indexedDB.open('mi-database', 2)
 
 
 //Se actualiza cuando se crea o se sube de version la DB
