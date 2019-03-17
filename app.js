@@ -23,10 +23,10 @@ request.onerror = (event) => {
 //insertar datos
 
 request.onsuccess = (event) => {
-    let db = event.target.result;
+	let db = event.target.result;
 
-    let heroesData = [
-        {id: '1', heroe: 'Spiderman', mensaje: 'Aqui su amigo Spiderman'},
-        {id: '2', heroe: 'Ironman', mensaje: 'Aqui su amigo Ironman'}
-    ]
+	let heroesData = [
+		{ id: '1', heroe: 'Spiderman', mensaje: 'Aqui su amigo Spiderman' },
+		{ id: '2', heroe: 'Ironman', mensaje: 'Aqui su amigo Ironman' }
+	];
 };
