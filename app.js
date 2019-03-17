@@ -31,4 +31,24 @@ request.onsuccess = (event) => {
     ];
     
     let heroesTransaction = db.transaction('heroes', 'readwrite')
+
+    heroesTransaction.onerror = event =>{
+        console.log("Error guardando : ", event.target.error)
+    }
+
+    //Informar sobre el exito de la transaction
+    heroesTransaction.oncomplete = event =>{
+        console.log('Transsaction hecha ', event)
+    }
+
+    let hereosStore = heroesTransaction.objectStore('heroes')
+
+      for(let heroe of heroesData){
+          hereosStore.add(heroe)
+      }
+
+      hereosStore.onsuccess = event => {
+          console.log("nuevo item agregado a la base de datos")
+      }
+
 };
