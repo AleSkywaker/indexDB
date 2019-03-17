@@ -16,3 +16,8 @@ request.onupgradeneeded = event =>{
     })
 }
 
+//Manejo de errores
+
+request.onerror = event =>{
+    console.log("DB error : ", event.target.error)
+}
